@@ -1,0 +1,56 @@
+{% extends "base.html" %} {% block content %}
+<style>
+    .main {
+        background-color: aliceblue;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+    }
+    .main-heading{
+        color: black;
+        font-size: 70px;
+        margin-bottom: 20px;
+    }
+    .label {
+        margin-bottom: 100px;
+    }
+    .button {
+        margin: 20px;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 3px;
+        width: 100%;
+        cursor: pointer;
+        background-color: black;
+        color: white;
+        font-size: 22px;
+        font-weight: 600;
+        outline: none;
+    }
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+</style>
+
+<div class="main">
+    <h1 class="main-heading">
+        Natural Images classifier
+    </h1>
+    <h2 class="label"> Upload the image to predict!</h2>
+    <form action="/" , method="post" , enctype="multipart/form-data">
+        <input type="file" name="imagefile">
+        <div>
+            <input type="submit" value="Predict image class" class="button">
+        </div>
+    </form>
+</div>
+
+{% endblock %}
